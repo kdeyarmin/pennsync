@@ -55,7 +55,7 @@ export default function IntegrationCard({
 
             <div className="mt-3">
               {expandable ? (
-                <Button variant="outline" size="sm" onClick={() => setOpen((v) => !v)}>
+                <Button variant="outline" size="sm" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
                   {actionLabel || "Open connector"}
                   {open ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
                 </Button>

@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import {
   Upload,
   FileSpreadsheet,
@@ -193,9 +192,7 @@ export default function OfficeAllyConnector() {
                 >
                   <RadioGroupItem value={rt.value} id={`oa-${rt.value}`} className="mt-0.5" />
                   <div>
-                    <Label htmlFor={`oa-${rt.value}`} className="text-sm font-medium cursor-pointer">
-                      {rt.label}
-                    </Label>
+                    <span className="block text-sm font-medium">{rt.label}</span>
                     <p className="text-xs text-gray-500">{rt.description}</p>
                   </div>
                 </label>
