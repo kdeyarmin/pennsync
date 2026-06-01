@@ -52,7 +52,8 @@ import {
   CheckCircle2,
   Clock,
   Upload,
-  Database
+  Database,
+  Plug
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -654,6 +655,23 @@ function ImportPatientsTab() {
           Use the current census file to add only new patients, or use the discharged report to safely archive patients who have been discharged.
         </p>
       </div>
+
+      <Card className="border-blue-200 bg-blue-50">
+        <CardContent className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-start gap-3 min-w-0">
+            <Plug className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-blue-900">Connected to Office Ally?</p>
+              <p className="text-xs text-blue-800">
+                Skip choosing a report type — the Integrations hub auto-detects census vs. discharge and syncs in one click.
+              </p>
+            </div>
+          </div>
+          <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto flex-shrink-0">
+            <Link to={createPageUrl("Integrations")}>Open Integrations</Link>
+          </Button>
+        </CardContent>
+      </Card>
 
       <PatientFileUpdateUploader />
     </div>

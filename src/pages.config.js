@@ -60,6 +60,7 @@ import DocumentHub from './pages/DocumentHub';
 import EventReport from './pages/EventReport';
 import Help from './pages/Help';
 import Incidents from './pages/Incidents';
+import Integrations from './pages/Integrations';
 import LearningCenter from './pages/LearningCenter';
 import Messages from './pages/Messages';
 import MyLearning from './pages/MyLearning';
@@ -99,6 +100,7 @@ export const PAGES = {
     "EventReport": EventReport,
     "Help": Help,
     "Incidents": Incidents,
+    "Integrations": Integrations,
     "LearningCenter": LearningCenter,
     "Messages": Messages,
     "MyLearning": MyLearning,

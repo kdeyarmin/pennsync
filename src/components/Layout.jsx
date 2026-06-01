@@ -6,7 +6,7 @@ import { queryClientInstance } from "@/lib/query-client";
 import {
   Home, Users, FileText, ClipboardList, Shield, GraduationCap,
   BarChart3, Settings, Brain, Target, Bell, LogOut,
-  BookOpen, WifiOff, Mail, BookUser, Video, HelpCircle, AlertTriangle, CheckCircle2, Phone
+  BookOpen, WifiOff, Mail, BookUser, Video, HelpCircle, AlertTriangle, CheckCircle2, Phone, Plug
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -207,9 +207,10 @@ export default function Layout({ children, currentPageName }) {
       category: "Configuration", 
       items: [
         { name: "Data Management", icon: Users, page: "PatientDataManagement" },
+        { name: "Integrations", icon: Plug, page: "Integrations" },
         { name: "Security", icon: Shield, page: "SecurityCompliance" },
         { name: "Settings", icon: Settings, page: "UserSettings" },
-      ] 
+      ]
     },
 
   ], [totalNotificationCount, isAdmin]);

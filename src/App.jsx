@@ -72,6 +72,7 @@ const VisitScribe = lazy(() => import('@/pages/VisitScribe'));
 const ClinicalChart = lazy(() => import('@/pages/ClinicalChart'));
 const LearningCenter = lazy(() => import('@/pages/LearningCenter'));
 const RegulatoryCompliance = lazy(() => import('@/pages/RegulatoryCompliance'));
+const Integrations = lazy(() => import('@/pages/Integrations'));
 
 const LayoutWrapper = ({ children, currentPageName }) => Layout ?
   <Layout currentPageName={currentPageName}>{children}</Layout>
@@ -155,6 +156,7 @@ const AuthenticatedApp = () => {
         <Route path="/IncidentReporting" element={<Navigate to="/Incidents" replace />} />
         <Route path="/ClinicalChart" element={<LayoutWrapper currentPageName="ClinicalChart"><ClinicalChart /></LayoutWrapper>} />
         <Route path="/RegulatoryCompliance" element={<LayoutWrapper currentPageName="RegulatoryCompliance"><RegulatoryCompliance /></LayoutWrapper>} />
+        <Route path="/Integrations" element={<LayoutWrapper currentPageName="Integrations"><Integrations /></LayoutWrapper>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Suspense>
