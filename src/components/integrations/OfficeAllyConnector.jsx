@@ -283,10 +283,10 @@ export default function OfficeAllyConnector() {
         </div>
       )}
 
-      <p className="text-xs text-gray-400 flex items-center gap-1">
-        <Badge variant="outline" className="text-[10px]">PHI</Badge>
-        Files are read in your browser and processed by your secure backend — nothing is stored by the connector itself.
-      </p>
+      <div className="text-xs text-gray-400 flex items-center gap-1.5">
+        <Badge variant="outline" className="text-[10px] flex-shrink-0">PHI</Badge>
+        <span>Files are read in your browser and processed by your secure backend — nothing is stored by the connector itself.</span>
+      </div>
     </div>
   );
 }
